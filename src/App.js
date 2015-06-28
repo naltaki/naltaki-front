@@ -1,6 +1,7 @@
 import React from 'react/addons';
 import Header from './Header';
 import TwitterSidebar from './TwitterSidebar';
+import CodeOfConduct from './CodeOfConduct';
 
 export default class App extends React.Component {
   constructor(props) {
@@ -14,6 +15,7 @@ export default class App extends React.Component {
         <div className="container">
           <div className="columns">
             <TwitterSidebar config={this.props.config} />
+            <CodeOfConduct />
           </div>
         </div>
       </section>
