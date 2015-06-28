@@ -23,7 +23,9 @@
   },
   "homepage": "https://github.com/naltaki/naltaki-front#readme",
   "dependencies": {
-    "basscss": "^6.1.6",
+    "normalize.css": "^3.0.3",
+    "octicons": "https://github.com/github/octicons/tarball/v2.4.1",
+    "primer": "https://github.com/primer/primer/tarball/v2.2.1",
     "react": "^0.13.3"
   },
   "devDependencies": {
