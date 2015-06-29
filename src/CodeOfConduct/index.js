@@ -4,6 +4,7 @@ export default class CodeOfConduct extends React.Component {
   constructor(props) {
     super(props);
   }
+  
   render() {
 
     return (
@@ -76,6 +77,7 @@ export default class CodeOfConduct extends React.Component {
 
         <p>This policy is licensed under the Creative Commons Zero license. It is public domain, no credit and no open licensing of your version is required.</p>
         <p>It was forked on June 8, 2015, from the example policy from the <a href="https://github.com/cville/conduct">Charlottesville Meetup community</a>.</p>
+        <br />
       </div>
     );
   }
