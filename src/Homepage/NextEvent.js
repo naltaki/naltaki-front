@@ -17,23 +17,27 @@ export default class NextEvent extends React.Component {
       );
     }
 
+    const cityMapperLink = `http://citymapper.com/directions?endcoord=${this.props.event.attributes.venueGeoLocation.latitude},${this.props.event.attributes.venueGeoLocation.longitude}&endname=${this.props.event.attributes.venueName}&endaddress=${this.props.event.attributes.venueAddress}`;
+
     return (
       <div>
         <h1>Next event</h1>
-        <p className="lead clearfix">
-          <span className="left">
+        <div className="lead clearfix">
+          <div className="left">
             <span>{moment(new Date(this.props.event.attributes.startAt)).format('MMMM Do YYYY, h:mma')} · </span>
             <a href={this.props.event.attributes.venueLink} target="_blank">{this.props.event.attributes.venueName}</a>
-          </span>
-          <span className="right">
-              <button className="btn btn-primary btn-sm btn-with-count">
-                RSVP
-              </button>
-              <span className="social-count">{this.props.event.attributes.guests.length}</span>
-          </span>
-        </p>
-        <br />
-        {this.props.event.attributes.description}
+          </div>
+          <div className="right">
+            <button className="btn">
+              RSVP
+              <span className="counter" style={{marginLeft: '3px'}}>{this.props.event.attributes.guests.length}</span>
+            </button>
+          </div>
+        </div>
+        <div dangerouslySetInnerHTML={{__html: this.props.event.attributes.description}} />
+        <a href={cityMapperLink} target="_blank">
+          <img src="https://static.citymapper.com/img/embed/GetMeThere_Citymapper.png" alt="Get directions with Citymapper" />
+        </a>
       </div>
     );
   }
