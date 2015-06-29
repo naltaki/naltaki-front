@@ -1,5 +1,6 @@
 import React from 'react/addons';
 import moment from 'moment';
+import CityMapperLink from './CityMapperLink';
 
 export default class NextEvent extends React.Component {
   constructor(props) {
@@ -17,8 +18,6 @@ export default class NextEvent extends React.Component {
       );
     }
 
-    const cityMapperLink = `http://citymapper.com/directions?endcoord=${this.props.event.attributes.venueGeoLocation.latitude},${this.props.event.attributes.venueGeoLocation.longitude}&endname=${this.props.event.attributes.venueName}&endaddress=${this.props.event.attributes.venueAddress}`;
-
     return (
       <div>
         <h1>Next event</h1>
@@ -35,9 +34,11 @@ export default class NextEvent extends React.Component {
           </div>
         </div>
         <div dangerouslySetInnerHTML={{__html: this.props.event.attributes.description}} />
-        <a href={cityMapperLink} target="_blank">
-          <img src="https://static.citymapper.com/img/embed/GetMeThere_Citymapper.png" alt="Get directions with Citymapper" />
-        </a>
+        <CityMapperLink
+          name={this.props.event.attributes.venueName}
+          coordinates={this.props.event.attributes.venueGeoLocation}
+          address={this.props.event.attributes.venueAddress}
+        />
       </div>
     );
   }
