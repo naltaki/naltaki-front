@@ -4,6 +4,7 @@ export default class TwitterSidebar extends React.Component {
   constructor(props) {
     super(props);
   }
+  
   render() {
     const BASE_URL = 'https://twitter.com/';
 
