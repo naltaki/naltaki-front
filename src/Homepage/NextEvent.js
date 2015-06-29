@@ -22,7 +22,7 @@ export default class NextEvent extends React.Component {
         <h1>Next event</h1>
         <p className="lead clearfix">
           <span className="left">
-            <span>{moment(this.props.event.attributes.startAt).format('MMMM Do YYYY, h:mma')} · </span>
+            <span>{moment(new Date(this.props.event.attributes.startAt)).format('MMMM Do YYYY, h:mma')} · </span>
             <a href={this.props.event.attributes.venueLink} target="_blank">{this.props.event.attributes.venueName}</a>
           </span>
           <span className="right">

@@ -9,7 +9,7 @@ export default class UpcomingEvents extends React.Component {
   renderEventItem(item, index) {
     return (
       <li key={index}>
-        <span>{moment(item.attributes.startAt).format('MMMM, Do YYYY')} · </span>
+        <span>{moment(new Date(item.attributes.startAt)).format('MMMM, Do YYYY')} · </span>
         <a href={item.attributes.venueLink} target="_blank">{item.attributes.venueName}</a>
       </li>
     );
@@ -30,7 +30,6 @@ export default class UpcomingEvents extends React.Component {
         <ul>
           {this.props.events.map(this.renderEventItem)}
         </ul>
-        <br />
       </div>
     );
   }

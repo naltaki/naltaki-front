@@ -9,7 +9,7 @@ export default class PreviousEvents extends React.Component {
   renderEventItem(item, index) {
     return (
       <li key={index}>
-        <span>{moment(item.attributes.startAt).format('MMMM, Do YYYY')} · </span>
+        <span>{moment(new Date(item.attributes.startAt)).format('MMMM, Do YYYY')} · </span>
         <a href={item.attributes.venueLink} target="_blank">{item.attributes.venueName}</a>
       </li>
     );
