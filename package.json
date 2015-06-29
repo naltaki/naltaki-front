@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/naltaki/naltaki-front#readme",
   "dependencies": {
+    "moment": "^2.10.3",
     "normalize.css": "^3.0.3",
     "octicons": "https://github.com/github/octicons/tarball/v2.4.1",
     "primer": "https://github.com/primer/primer/tarball/v2.2.1",
