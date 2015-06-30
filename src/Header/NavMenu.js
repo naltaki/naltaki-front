@@ -16,7 +16,7 @@ export default class NavMenu extends React.Component {
   render() {
     return (
       <nav className="masthead-nav">
-        {this.props.config.header_menu_links.map(this.renderNavItem)}
+        {this.props.links.map(this.renderNavItem)}
       </nav>
     );
   }
