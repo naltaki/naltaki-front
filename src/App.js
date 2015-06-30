@@ -1,6 +1,6 @@
 import React from 'react/addons';
 import Header from './Header';
-import TwitterSidebar from './TwitterSidebar';
+import TwitterSidebar from './widgets/TwitterSidebar';
 import CodeOfConduct from './CodeOfConduct';
 
 export default class App extends React.Component {

@@ -10,8 +10,8 @@ export default class TwitterSidebar extends React.Component {
 
     return (
       <div className="one-fourth column">
-        <a className="twitter-timeline" href={BASE_URL + this.props.config.twitter_username} data-widget-id={this.props.config.twitter_widget_id}>
-          Tweets by @{this.props.config.twitter_username}
+        <a className="twitter-timeline" href={BASE_URL + this.props.config.twitter_username} data-widget-id={this.props.config.twitterWidgetId}>
+          Tweets by @{this.props.config.twitterUsername}
         </a>
         &nbsp;
       </div>
