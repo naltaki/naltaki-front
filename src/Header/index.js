@@ -1,5 +1,5 @@
-import React from 'react/addons';
-import NavMenu from './NavMenu';
+import React    from 'react';
+import NavMenu  from './NavMenu';
 
 export default class Header extends React.Component {
   constructor(props) {

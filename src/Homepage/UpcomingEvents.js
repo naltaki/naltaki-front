@@ -1,5 +1,5 @@
-import React from 'react/addons';
-import moment from 'moment';
+import React  from  'react';
+import moment from  'moment';
 
 export default class UpcomingEvents extends React.Component {
   constructor(props) {

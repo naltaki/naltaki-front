@@ -1,4 +1,4 @@
-import React from 'react/addons';
+import React  from 'react';
 import moment from 'moment';
 
 export default class PreviousEvents extends React.Component {

@@ -1,4 +1,4 @@
-import React from 'react/addons';
+import React from 'react';
 
 export default class CityMapperLink extends React.Component {
   constructor(props) {

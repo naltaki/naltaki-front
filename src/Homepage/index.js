@@ -1,7 +1,8 @@
-import React from 'react/addons';
-import NextEvent from './NextEvent';
+import React          from 'react';
+import NextEvent      from './NextEvent';
 import UpcomingEvents from './UpcomingEvents';
 import PreviousEvents from './PreviousEvents';
+import examples       from './examples';
 
 export default class Homepage extends React.Component {
   constructor(props) {
@@ -15,9 +16,9 @@ export default class Homepage extends React.Component {
         <blockquote>
           <p>{this.props.description}</p>
         </blockquote>
-        <NextEvent event={null} />
-        <UpcomingEvents events={[]} />
-        <PreviousEvents events={[]} />
+        <NextEvent event={examples[0]} />
+        <UpcomingEvents events={examples} />
+        <PreviousEvents events={examples} />
         <br />
       </div>
     );

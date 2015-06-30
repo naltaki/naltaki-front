@@ -1,9 +1,9 @@
-import React from 'react/addons';
-import Header from './Header';
+import React          from 'react';
+import Header         from './Header';
 import TwitterSidebar from './widgets/TwitterSidebar';
-import Homepage from './Homepage';
-import CodeOfConduct from './CodeOfConduct';
-import Contact from './Contact';
+import Homepage       from './Homepage';
+import CodeOfConduct  from './CodeOfConduct';
+import Contact        from './Contact';
 
 // <CodeOfConduct />
 // <Contact formLink={this.props.config.formContact} />
