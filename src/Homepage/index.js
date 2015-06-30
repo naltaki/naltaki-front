@@ -2,11 +2,17 @@ import React          from 'react';
 import NextEvent      from './NextEvent';
 import UpcomingEvents from './UpcomingEvents';
 import PreviousEvents from './PreviousEvents';
-import examples       from './examples';
+import ParseComponent from 'parse-react/class';
 
-export default class Homepage extends React.Component {
+export default class Homepage extends ParseComponent {
   constructor(props) {
     super(props);
+  }
+
+  observe(props, state) {
+    return {
+      events: new Parse.Query('Events')
+    };
   }
 
   render() {
@@ -16,9 +22,9 @@ export default class Homepage extends React.Component {
         <blockquote>
           <p>{this.props.description}</p>
         </blockquote>
-        <NextEvent event={examples[0]} />
-        <UpcomingEvents events={examples} />
-        <PreviousEvents events={examples} />
+        <NextEvent event={this.data.events[0]} />
+        <UpcomingEvents events={this.data.events} />
+        <PreviousEvents events={this.data.events} />
         <br />
       </div>
     );

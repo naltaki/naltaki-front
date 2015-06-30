@@ -23,21 +23,21 @@ export default class NextEvent extends React.Component {
         <h1>Next event</h1>
         <div className="lead clearfix">
           <div className="left">
-            <span>{moment(new Date(this.props.event.attributes.startAt)).format('MMMM Do YYYY, h:mma')} · </span>
-            <a href={this.props.event.attributes.venueLink} target="_blank">{this.props.event.attributes.venueName}</a>
+            <span>{moment(this.props.event.startAt).format('MMMM Do YYYY, h:mma')} · </span>
+            <a href={this.props.event.venueLink} target="_blank">{this.props.event.venueName}</a>
           </div>
           <div className="right">
             <button className="btn">
               RSVP
-              <span className="counter" style={{marginLeft: '3px'}}>{this.props.event.attributes.guests.length}</span>
+              <span className="counter" style={{marginLeft: '3px'}}>{this.props.event.guests.length}</span>
             </button>
           </div>
         </div>
-        <div dangerouslySetInnerHTML={{__html: this.props.event.attributes.description}} />
+        <div dangerouslySetInnerHTML={{__html: this.props.event.description}} />
         <CityMapperLink
-          name={this.props.event.attributes.venueName}
-          coordinates={this.props.event.attributes.venueGeoLocation}
-          address={this.props.event.attributes.venueAddress}
+          name={this.props.event.venueName}
+          coordinates={this.props.event.venueGeoLocation}
+          address={this.props.event.venueAddress}
         />
       </div>
     );
