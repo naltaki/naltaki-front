@@ -1,7 +1,6 @@
-import React      from 'react';
-import Parse      from 'parse';
-import ParseReact from 'parse-react';
-import App        from './App';
+import React  from 'react';
+import Parse  from 'parse';
+import App    from './App';
 
 Parse.initialize(window.PARSE_APPLICATION_ID, window.PARSE_JAVASCRIPT_KEY);
 
