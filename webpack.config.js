@@ -28,5 +28,10 @@ module.exports = {
   },
   plugins: [
     new ExtractTextPlugin('[name].css')
-  ]
+  ],
+  externals: {
+    'react': 'React',
+    'parse': 'Parse',
+    'parse-react': 'ParseReact'
+  }
 };
