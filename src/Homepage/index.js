@@ -17,14 +17,26 @@ export default class Homepage extends ParseComponent {
 
   render() {
 
+    let eventsContent;
+
+    if(this.pendingQueries().length !== 0) {
+      eventsContent = <p>Loading...</p>
+    } else {
+      eventsContent = (
+        <div>
+          <NextEvent event={this.data.events[0]} />
+          <UpcomingEvents events={this.data.events} />
+          <PreviousEvents events={this.data.events} />
+        </div>
+      );
+    }
+
     return (
       <div className="three-fourths column markdown-body">
         <blockquote>
           <p>{this.props.description}</p>
         </blockquote>
-        <NextEvent event={this.data.events[0]} />
-        <UpcomingEvents events={this.data.events} />
-        <PreviousEvents events={this.data.events} />
+        {eventsContent}
         <br />
       </div>
     );
