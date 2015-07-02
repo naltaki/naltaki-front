@@ -1,6 +1,8 @@
 import React  from 'react';
 import Parse  from 'parse';
 import App    from './App';
+import Router from 'react-router';
+import routes from './routes';
 
 Parse.initialize(window.PARSE_APPLICATION_ID, window.PARSE_JAVASCRIPT_KEY);
 
@@ -16,4 +18,6 @@ const config = {
   twitterWidgetId: window.TWITTER_WIDGET_ID
 };
 
-React.render(<App config={config} />, mountNode);
+Router.run(routes, Router.HashLocation, (Root) => {
+  React.render(<Root config={config} />, mountNode);
+});

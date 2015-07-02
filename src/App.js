@@ -1,13 +1,7 @@
-import React          from 'react';
-import Header         from './Header';
-import TwitterSidebar from './widgets/TwitterSidebar';
-import Homepage       from './Homepage';
-import CodeOfConduct  from './CodeOfConduct';
-import Contact        from './Contact';
-
-// <CodeOfConduct />
-// <Contact formLink={this.props.config.formContact} />
-// <Homepage description={this.props.config.description} />
+import React            from 'react';
+import { RouteHandler } from 'react-router';
+import Header           from './Header';
+import TwitterSidebar   from './widgets/TwitterSidebar';
 
 export default class App extends React.Component {
   constructor(props) {
@@ -21,7 +15,7 @@ export default class App extends React.Component {
         <div className="container">
           <div className="columns">
             <TwitterSidebar config={this.props.config} />
-            <Homepage description={this.props.config.description} />
+            <RouteHandler config={this.props.config} />
           </div>
         </div>
       </section>
