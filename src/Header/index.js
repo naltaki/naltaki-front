@@ -14,7 +14,7 @@ export default class Header extends React.Component {
     }
 
     return (
-      <header className="masthead" style={{backgroundColor: '#4C5664'}}>
+      <header className="masthead" style={{backgroundColor: this.props.config.headerColor}}>
         <div className="container">
           <a href={this.props.config.rootUrl} className="masthead-logo">{this.props.config.name}</a>
           {navMenu}
