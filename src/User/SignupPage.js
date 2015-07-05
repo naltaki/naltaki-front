@@ -28,7 +28,7 @@ export default class SignupPage extends React.Component {
 
   render() {
     return (
-      <div className="three-fourths column markdown-body">
+      <div className="three-fourths column markdown-body large-on-small-device">
         <h2>Join our group</h2>
         <form onSubmit={this.onSubmit}>
           <dl className="form">

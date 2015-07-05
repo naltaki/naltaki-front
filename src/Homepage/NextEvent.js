@@ -29,7 +29,7 @@ export default class NextEvent extends React.Component {
           <div className="right">
             <button className="btn">
               RSVP
-              <span className="counter" style={{marginLeft: '3px'}}>{this.props.event.guests.length}</span>
+              <span className="counter">{this.props.event.guests.length}</span>
             </button>
           </div>
         </div>

@@ -8,7 +8,7 @@ export default class CodeOfConduct extends React.Component {
   render() {
 
     return (
-      <div className="three-fourths column markdown-body">
+      <div className="three-fourths column markdown-body large-on-small-device">
         <h1 id="group-code-of-conduct">Group Code of Conduct</h1>
 
         <h2 id="the-short-version">The Short Version</h2>

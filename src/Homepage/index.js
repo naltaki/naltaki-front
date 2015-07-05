@@ -32,7 +32,7 @@ export default class Homepage extends ParseComponent {
     }
 
     return (
-      <div className="three-fourths column markdown-body">
+      <div className="three-fourths column markdown-body large-on-small-device">
         <blockquote>
           <p>{this.props.description}</p>
         </blockquote>
