@@ -12,5 +12,6 @@ export default (
     <DefaultRoute handler={Homepage} />
     <Route path="code-of-conduct" handler={CodeOfConduct} />
     <Route path="contact" handler={Contact} />
+    <Route path="signup" handler={SignupPage} />
   </Route>
 );
