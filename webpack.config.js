@@ -2,8 +2,8 @@ var path              = require('path');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-  devtool: 'eval',
-  debug: true,
+  // devtool: 'eval',
+  // debug: true,
   entry: {
     main: path.resolve(__dirname, 'src/main.js'),
     style: path.resolve(__dirname, 'src/main.less')
@@ -28,5 +28,10 @@ module.exports = {
   },
   plugins: [
     new ExtractTextPlugin('[name].css')
-  ]
+  ],
+  externals: {
+    'react': 'React',
+    'parse': 'Parse',
+    'parse-react': 'ParseReact'
+  }
 };
