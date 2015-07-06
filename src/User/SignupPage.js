@@ -8,7 +8,6 @@ export default class SignupPage extends React.Component {
     this.handleChange = this.handleChange.bind(this);
 
     this.state = {
-      fullname: '',
       email: '',
       password: '',
       passwordConfirmation: ''
@@ -33,17 +32,17 @@ export default class SignupPage extends React.Component {
         <form onSubmit={this.onSubmit}>
           <dl className="form">
             <dt className="input-label">
-              <label for="fullname">Fullname</label>
+              <label for="username">Username</label>
             </dt>
             <dd>
               <input
-                id="fullname"
+                id="username"
                 size="30"
                 type="text"
-                value={this.state.fullname}
+                value={this.state.username}
                 onChange={this.handleChange}
               />
-              <p className="note">My name is Bond, James Bond</p>
+              <p className="note">My name is YOLO</p>
             </dd>
           </dl>
 
