@@ -1,5 +1,7 @@
 # Naltaki
 
+The project is not finished yet. Stay tune.
+
 ## What and why
 
 Naltaki is an experimental project made to offer a substitute to Meetup.com. It is using Parse.com as a back end and React & Primer on the front end side.
